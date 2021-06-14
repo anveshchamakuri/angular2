@@ -1,0 +1,24 @@
+<p>productslist works!</p>
+{{name}}
+
+<!--<button (click)="countfun()">Count</button>
+count is : {{countval}}<br>
+<input type="text" [(ngModel)]='inputval'>
+Name is: {{inputval}}-->
+<input type="text" [(ngModel)]='inputval'>
+<button (click)="myclick(inputval)">Submit</button>
+
+<div>
+    Employees data:{{ Allreviews | json}}
+</div>
+<table>
+    <tr>
+        <th>S.no</th>
+        <th>Product name</th>
+    </tr>
+    <tr>
+       <td>1</td>
+       <td>ab</td> 
+    </tr>
+</table>
+<button class='btn btn-primary' (click)="valueChanged()">Click me</button>

@@ -1,0 +1,21 @@
+<h3 class="m-2">Items</h3>
+
+<div class="col-12 row">
+    <div class="col-4 mt-1 mb-1" *ngFor="let item of pizzaItems">
+        <mat-card class="example-card">
+              <mat-card-title>{{item.name}}</mat-card-title>
+              <mat-card-subtitle>{{item.price}}</mat-card-subtitle>
+
+            <img mat-card-image [src]="item.image" alt="image no displayed">
+            <mat-card-content>
+              <p>{{item.description}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="selectedItem(item)">Select</button>
+
+            </mat-card-actions>
+          </mat-card>
+    </div>
+
+</div>

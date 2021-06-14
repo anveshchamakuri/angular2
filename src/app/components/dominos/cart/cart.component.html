@@ -1,0 +1,25 @@
+<div class="col-12 row">
+  <div class="col-9">
+
+    <app-pizzaitems (parentItem)="items($event)"></app-pizzaitems>
+
+  </div>
+  <div class="col-3">
+    <h3 class="m-2">Cart</h3>
+
+    <div class="col-12 mt-1 mb-1" *ngFor="let item of selectedItems; let i = index">
+      <mat-card class="example-card">
+        <mat-card-title>{{item.name}}</mat-card-title>
+        <mat-card-subtitle>{{item.price}}</mat-card-subtitle>
+        <p class="float-right text-danger" (click)="removeItem(i)">Remove</p>
+        <img mat-card-image [src]="item.image" alt="image no displayed">
+        <mat-card-content>
+          <p>{{item.description}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+  </div>
+
+</div>

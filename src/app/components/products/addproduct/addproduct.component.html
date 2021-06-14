@@ -1,0 +1,22 @@
+<p>addproduct works!</p>
+<button #btn>Click me</button>
+<button (click)="btnclick()">Click me2</button>
+<table class="border">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Salary</th>
+    </tr>
+    <tr *ngFor="let emp of Employees">
+        <td>{{emp.empid}}</td>
+        <td>{{emp.empname}}</td>
+        <td>{{emp.gender | setgender}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.promoted()}}</td>
+    </tr>
+</table>
+This is the child comp data :{{count}}<br>
+This is the child comp data : {{val}}<br>
+<app-productslist [Allreviews]='Employees'  (valueChange)='displayCounter($event)' (inputvalchange)='findinput($event)'>
+</app-productslist>
