@@ -6,11 +6,14 @@ import { CommonModule } from '@angular/common';
 import { ItemsRoutingModule } from './items-routing.module';
 import { AdditemComponent } from './additem/additem.component';
 import { ItemslistComponent } from './itemslist/itemslist.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [AdditemComponent, ItemslistComponent,SampleDirective],
   imports: [
     CommonModule,
     ItemsRoutingModule,
+    ReactiveFormsModule
     
   ]
 })
