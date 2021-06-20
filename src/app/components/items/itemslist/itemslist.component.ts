@@ -7,16 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemslistComponent implements OnInit {
   rows;
-  constructor(private service:ItemserivesService) { }
+  constructor(private service: ItemserivesService) { }
 
   ngOnInit(): void {
     this.getList();
   }
-  getList(){
+  getList(): void{
     this.service.getList().subscribe(response => {
       console.log(response);
-      debugger
       this.rows = response;
-    })
+    });
   }
 }

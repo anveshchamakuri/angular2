@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
@@ -7,18 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
   selectedItems = [];
+  myInputMessage = 'I am the parent compnent';
+
   constructor() { }
 
   ngOnInit(): void {
-  }
-  items($event) {
-    debugger
-    console.log("partent");
+      }
+  items($event): void {
+    console.log('partent');
     this.selectedItems.push($event.vals);
     console.log(this.selectedItems);
   }
   removeItem(i): void{
-    debugger
     this.selectedItems.splice(i);
   }
 }

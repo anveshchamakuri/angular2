@@ -13,7 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import { FullviewdataComponent } from './components/layout/fullviewdata/fullviewdata.component';
 import { AuthviewComponent } from './components/layout/authview/authview.component';
-import { HttpClient, HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {FormsModule } from '@angular/forms';
 import {ReactiveFormsModule } from '@angular/forms';
 import { NgxOrgChartModule } from 'ngx-org-chart';
@@ -35,7 +35,7 @@ import { NgxOrgChartModule } from 'ngx-org-chart';
     ReactiveFormsModule,
     DominosModule
   ],
-  providers: [HttpClient,{provide :HTTP_INTERCEPTORS,useClass:ExampleinterceptorInterceptor,multi:true}],
+  providers: [HttpClient, {provide : HTTP_INTERCEPTORS, useClass: ExampleinterceptorInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

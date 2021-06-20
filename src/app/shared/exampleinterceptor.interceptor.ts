@@ -13,8 +13,7 @@ export class ExampleinterceptorInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    debugger
     const authkey = 'a123';
-    return next.handle(request.clone({setHeaders:{authkey}}));
+    return next.handle(request.clone({setHeaders: {authkey}}));
   }
 }

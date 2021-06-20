@@ -4,11 +4,8 @@
 <button (click)="logout()">logout</button>
 <h4>Reactive Form</h4>
 <form [formGroup]="form">
-    <input type="checkbox" formControlName="published"> Published
-    <div *ngIf="form.controls.published.value">
-
       <h2>Credentials</h2>
-      <button (click)="addCreds()">Add</button>
+      <button (click)="addCreds()" class="btn btn-primary">Add</button>
 
       <div formArrayName="credentials" *ngFor="let creds of form.controls.credentials?.value; let i = index">
         <ng-container [formGroupName]="i">
@@ -17,7 +14,6 @@
         </ng-container>
       </div>
 
-    </div>
   </form>
   <br>
   {{form.value |json}}

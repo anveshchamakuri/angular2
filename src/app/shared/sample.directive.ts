@@ -5,17 +5,17 @@ import { Directive,ElementRef,OnInit,HostListener } from '@angular/core';
 })
 export class SampleDirective implements OnInit {
 
-  constructor(private eleref:ElementRef) { }
+  constructor(private eleref: ElementRef) { }
 
-  ngOnInit(){
+  ngOnInit(): void{
     this.eleref.nativeElement.style.color = 'red';
   }
-  @HostListener('keypress') keypress(){
-    if(this.eleref.nativeElement.value.length+1 > 10){
-      return false
+  @HostListener('keypress') keypress(): any{
+    if (this.eleref.nativeElement.value.length + 1 > 10){
+      return false;
 
     } else {
-      return true
+      return true;
     }
   }
 }

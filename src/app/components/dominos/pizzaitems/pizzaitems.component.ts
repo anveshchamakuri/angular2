@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pizzaitems',
@@ -8,10 +8,15 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class PizzaitemsComponent implements OnInit {
 
   pizzaItems = [];
+  @Input() myinputMsg;
+
   @Output()  parentItem = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit(): void {
+
+    console.log(this.myinputMsg);
+
     this.pizzaItems = [{
       name: 'Achari Do Pyaza',
       price: 199,
@@ -40,9 +45,9 @@ export class PizzaitemsComponent implements OnInit {
       image : 'https://images.dominos.co.in/new_cheese_n_corn.jpg',
       description: 'Tangy & spicy achari flavours on a super cheesy onion pizza- as desi as it gets!'
     },
-    ]
+    ];
   }
-  selectedItem(vals) {
+  selectedItem(vals) : void {
     console.log('on click child');
     this.parentItem.emit({vals});
 }

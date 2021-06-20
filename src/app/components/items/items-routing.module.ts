@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdditemComponent } from './additem/additem.component';
 import { ItemslistComponent } from './itemslist/itemslist.component';
 const routes: Routes = [
-  {path: 'additem', component: AdditemComponent, canActivate:[ActiveguardGuard]}, // guard check the user
+  {path: 'additem', component: AdditemComponent, canActivate: [ActiveguardGuard]}, // guard check the user
   {path: 'itemslist', component: ItemslistComponent },
 ];
 @NgModule({

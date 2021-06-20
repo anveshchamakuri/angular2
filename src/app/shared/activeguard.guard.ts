@@ -7,14 +7,14 @@ import { Router} from '@angular/router';
   providedIn: 'root'
 })
 export class ActiveguardGuard implements CanActivate {
-  constructor(public rtr:Router) { }
+  constructor(public rtr: Router) { }
 
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       // check the user
-      if(localStorage.getItem('uname') == 'a' && localStorage.getItem('pwd')=='a'){
-        return true
+      if (localStorage.getItem('uname') == 'a' && localStorage.getItem('pwd')=='a'){
+        return true;
       //  this.rtr.navigate(['/auth/login'])
       } else {
         this.rtr.navigate(['/auth/login'])
